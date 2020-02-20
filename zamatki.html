@@ -91,7 +91,7 @@
       border-radius: 10px;
       background-color: #ff9f43;
       grid-column: 2/3;
-      height: 60px;
+      height: 70px;
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -114,13 +114,62 @@
       border-radius: 10px;
       background-color: rgb(241, 11, 11);
       grid-column: 3/4;
+      display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      height: 50px;
       margin-top: 20px;
-      padding: 20px;
+      padding: 10px;
       transition: 0.4s;
       font-family: arial;
+    }
+
+    @media screen and (max-width:414px) {
+      .add {
+        font-size: 13px;
+        height: 70px;
+        margin-top: 5px;
+      }
+
+      .vazhnaya {
+        font-size: 13px;
+        margin-top: 5px;
+      }
+
+      .prostaya {
+        font-size: 13px;
+        margin-top: 5px;
+      }
+
+      .del {
+        font-size: 12px;
+        margin-top: 5px;
+
+      }
+    }
+
+    @media screen and (max-width:321px) {
+      .add {
+        font-size: 11px;
+        height: 60px;
+      }
+
+      .vazhnaya {
+        font-size: 11px;
+        height: 60px;
+      }
+
+      .prostaya {
+        font-size: 11px;
+        height: 60px;
+      }
+
+      .del {
+        font-size: 11px;
+        height: 40px;
+
+      }
     }
   </style>
 </head>
