@@ -73,7 +73,7 @@
     .addzamatka {
       grid-column: 1/4;
       margin-top: 7px;
-      height: 70px;
+      height: 100px;
       text-align: left;
       font-size: 20px;
       border-radius: 10px;
@@ -160,33 +160,30 @@
       //Создаем заметки
       document.querySelector('.add').onclick = () => {
         let text = document.querySelector('.addzamatka').value;
+        let a = document.createElement("div");
+        let b = document.createElement("div");
+        let br = document.createElement("br")
         if (document.querySelector('.addzamatka').value == '') {
           alert('Напишите заметку');
         } else if (document.querySelector('.prostaya').style.display == 'none') {
-          let a = document.createElement("div");
           a.classList.add('spic');
           a.classList.add('zametka');
           a.innerHTML = text;
-          if (a.length > 180) {
-            let br = createElement("br");
-            a.append(br);
-          }
           document.querySelector('.wrapper').append(a);
+
+
           localStorage.setItem("page", document.getElementsByTagName("html")[0].innerHTML);
         } else {
-          let b = document.createElement("div");
           b.classList.add('notSpic');
           b.classList.add('zametka');
           b.innerHTML = text;
-          if (b.length > 180) {
-            let br = createElement("br");
-            b.append(br);
-          }
           document.querySelector('.wrapper').append(b);
           localStorage.setItem("page", document.getElementsByTagName("html")[0].innerHTML);
         }
         document.querySelector('.addzamatka').value = '';
+
       }
+
       //Конец создания
       //Удалеине заметок
       document.querySelector('.del').onclick = () => {
